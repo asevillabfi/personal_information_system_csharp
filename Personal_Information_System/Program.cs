@@ -63,11 +63,17 @@ namespace PersonalInformationSystem
                 if (string.IsNullOrEmpty(iage)) {
                     Console.WriteLine("Required Field! Do not skip");
                         continue; 
-                };
+                };                
 
                 // correct input
                 if (int.TryParse(iage, out int ageN))
                 {
+                    // negative input
+                    if (ageN < 0)
+                    {
+                        Console.WriteLine("Negative Value! Try again");
+                        continue;
+                    }
                     age = ageN;
                     break;
                 }
@@ -92,6 +98,12 @@ namespace PersonalInformationSystem
                 // correct input
                 if (double.TryParse(iheight, out double heightN))
                 {
+                    // negative input
+                    if (heightN < 0)
+                    {
+                        Console.WriteLine("Negative Value! Try again");
+                        continue;
+                    }
                     height = heightN;
                     break;
                 }
