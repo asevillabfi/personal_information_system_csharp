@@ -120,7 +120,7 @@ namespace PersonalInformationSystem
             Console.WriteLine(personalInfo);
 
             // Check age for legal drinking
-            if (height < LEGAL_DRINKING_AGE)
+            if (age < LEGAL_DRINKING_AGE)
             {
                 Console.Write("\nSorry, you are underage for drinking\n");
             } else
